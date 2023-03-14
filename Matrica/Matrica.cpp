@@ -8,7 +8,7 @@ Matrix::Matrix(int rows, int cols) {
 Matrix::~Matrix() {
 	for (int i = 0; i < m_rows; i++)
 	{
-		delete m_data[i];
+		delete[] m_data[i];
 	}
 	delete[] m_data;
 }
@@ -145,7 +145,7 @@ Matrix transpose(const Matrix& matrix) {
 	}
 	for (int i = 0; i < matrix.m_rows; i++)
 	{
-		delete m[i];
+		delete[] m[i];
 	}
 	delete[] m;
 }
