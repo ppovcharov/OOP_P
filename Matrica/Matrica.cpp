@@ -3,7 +3,15 @@
 Matrix::Matrix(int rows, int cols) {
 	m_rows = rows;
 	m_cols = cols;
-	m_data = 0;
+	int**m_data=new int*[m_rows];
+	for(int i =0; i<m_rows;i++){
+		m_data[i]=new int[m_cols];
+	}
+	for(int i=0;i<m_rows;i++){
+		for(int j=0;j<m_cols;j++){
+			m_data[i][j]=0;
+		}
+	}
 }
 Matrix::~Matrix() {
 	for (int i = 0; i < m_rows; i++)
