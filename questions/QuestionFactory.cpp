@@ -1,5 +1,5 @@
 #include "QuestionFactory.h"
-
+ 
 Question* QuestionFactory::createQuestion()
 {
 	std::string type;
